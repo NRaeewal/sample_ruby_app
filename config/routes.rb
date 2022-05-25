@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
 
-  def hello
-    render html: "hello world!"
-  end
-  
+root 'application#hello'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
