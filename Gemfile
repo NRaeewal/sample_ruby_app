@@ -18,13 +18,13 @@ gem "puma", "~> 5.0"
 gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+gem 'turbolinks', '5.2.1'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+gem 'jbuilder', '2.10.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -45,7 +45,9 @@ gem 'tzinfo-data', '~> 1.2021', '>= 1.2021.5'
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem 'sass-rails', '6.0.0'
+gem 'webpacker', '5.4.0'
+
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -71,6 +73,11 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'rails-controller-testing', '1.0.5'
+  gem 'minitest', '5.11.3'
+  gem 'minitest-reporters', '1.3.8'
+  gem 'guard', '2.16.2'
+  gem 'guard-minitest', '2.4.6'
 end
 
 group :production do
