@@ -15,4 +15,10 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-console.log('Hello World from Webpacker')
+import "channels"
+import "jquery"
+import "bootstrap"
+
+Rails.start()
+Turbolinks.start()
+ActiveStorage.start()
