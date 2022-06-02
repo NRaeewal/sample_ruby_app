@@ -12,8 +12,17 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   get '/microposts/:id', to: 'microposts#destroy'
-  resources :users 
-  resources :microposts,          only: [:create, :destroy]
+  
+  resources :users do
+    member do
+      get :following, :followers
+    end
+ end  
+    # this is a function meaning for each user id (member) have a /following page and a /followers page 
+
+ resources :microposts,          only: [:create, :destroy]
+ resources :relationships,       only: [:create, :destroy]
+
   get '/microposts', to: 'static_pages#home'
 
 
